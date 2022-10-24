@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup as bs
 
-# Функция для парсинга страницы url. В выводе- цитата, автор, теги.
+#Function for parsing the url page. In the output: quote, author, tags.
 def quotes_test():
     url = "https://quotes.toscrape.com"
     r = requests.get(url)
@@ -16,7 +16,7 @@ def quotes_test():
             print('#' + tag.text)
         print('\n')
 
-#Функция для парсинга страницы url(магазин с товарами). На выводе: номер лота, цена и наименование товара.
+#Function for parsing the url page (store with products). On the output: lot number, price and product name.
 def scrapingclub_test():
     url = "https://scrapingclub.com/exercise/list_basic/?page=1"
     params = {'page':1}
